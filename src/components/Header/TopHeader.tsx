@@ -48,7 +48,7 @@ const TopHeader = () => {
 
           {/* right */}
           <div className="flex">
-            <a href="https://www.facebook.com/mediusware/" target="_blank">
+            <a href="https://www.facebook.com/mediusware" target="_blank">
               <img
                 src="/src/assets/Header/facebook.svg"
                 className="lg:mr-2 mr-1"
@@ -59,7 +59,7 @@ const TopHeader = () => {
             </a>
 
             <a
-              href="https://www.linkedin.com/company/mediusware-ltd/"
+              href="https://www.linkedin.com/company/mediusware-ltd"
               target="_blank"
             >
               <img
