@@ -33,7 +33,7 @@ const AllBlogs = () => {
     queryKey: ["Blogs", currentSlug],
     queryFn: async () => {
       const result = await axios.get(
-        `${import.meta.env.VITE_BASE_URL}/blogs`
+        `${import.meta.env.VITE_BASE_URL}/blogs/`
       );
 
       const filteredBlogs = result?.data?.results.filter(blog=> blog.slug === currentSlug)
