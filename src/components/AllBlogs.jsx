@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { div } from "framer-motion/client";
 import { MoveRight } from "lucide-react";
 import { useState } from "react";
+import Loader from "./Loader";
 const AllBlogs = () => {
 
   const [currentSlug, setCurrentSlug]= useState('the-power-of-blockchain-beyond-money-simple-explor')
@@ -29,7 +30,7 @@ const AllBlogs = () => {
   console.log("filteredCategory", blogsCategory);
 
   // blogs
-  const { data: blogsData = [] } = useQuery({
+  const { data: blogsData = [], isLoading } = useQuery({
     queryKey: ["Blogs", currentSlug],
     queryFn: async () => {
       const result = await axios.get(
@@ -101,12 +102,14 @@ const AllBlogs = () => {
 
       {/* blogs card */}
 
-      <div className="grid grid-cols-3 gap-8 py-24">
-        {blogsData.map((blog) => (
-          <motion.div>
-            <BlogCard key={blog.id} blog={blog}></BlogCard>
-          </motion.div>
-        ))}
+      <div className="grid w-full grid-cols-3 gap-8 py-24">
+        {
+          isLoading ?  <div className="col-span-3  justify-center block items-center"><Loader></Loader></div> :  blogsData.map((blog) => (
+            <motion.div>
+              <BlogCard key={blog.id} blog={blog}></BlogCard>
+            </motion.div>
+          ))
+        }
       </div>
 
      <div className="flex justify-center  w-full pb-4">
