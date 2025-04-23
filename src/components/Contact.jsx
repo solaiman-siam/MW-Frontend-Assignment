@@ -1,6 +1,8 @@
 import { Send } from "lucide-react";
 import SlotCounter from 'react-slot-counter';
 function Contact() {
+
+
   return (
     <div className="container max-w-[1320px] py-24">
       <div className="bg-[#0060af] bg-gradient-to-tr from-[#0060af] to-[#019bab] flex items-center gap-8 rounded-xl p-14 text-white">
@@ -15,19 +17,19 @@ function Contact() {
 
           <div className="flex items-center gap-4 pt-12">
             <div className="flex bg-white p-4 rounded-lg flex-col gap-2">
-              <h4 className="text-3xl font-bold text-[#0060af]"> <SlotCounter value={10} duration={2} />+</h4>
+              <h4 className="text-3xl font-bold text-[#0060af]"> <SlotCounter animateOnVisible={true} value={10} duration={2} />+</h4>
               <p className="bg-gradient-to-tr from-[#0060af] to-[#019bab] bg-clip-text text-transparent">
                 Yes in <br></br> Business
               </p>
             </div>
             <div className="flex bg-white p-4 rounded-lg flex-col gap-2">
-              <h4 className="text-3xl font-bold text-[#0060af]"> <SlotCounter value={100} duration={2} />+</h4>
+              <h4 className="text-3xl font-bold text-[#0060af]"> <SlotCounter animateOnVisible={true} value={100} duration={2} />+</h4>
               <p className="bg-gradient-to-tr from-[#0060af] to-[#019bab] bg-clip-text text-transparent">
                 In House <br></br> employees
               </p>
             </div>
             <div className="flex bg-white p-4 rounded-lg flex-col gap-2">
-              <h4 className="text-3xl font-bold text-[#0060af]">  <SlotCounter value={250} duration={2} />+</h4>
+              <h4 className="text-3xl font-bold text-[#0060af]">  <SlotCounter animateOnVisible={true} value={250} duration={2} />+</h4>
               <p className="bg-gradient-to-tr from-[#0060af] to-[#019bab] bg-clip-text text-transparent">
                 Successfully <br></br> Delivery Projects
               </p>
